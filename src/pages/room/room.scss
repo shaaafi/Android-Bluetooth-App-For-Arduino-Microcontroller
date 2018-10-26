@@ -1,0 +1,23 @@
+page-room {
+    .bg {
+        background-image: url('../assets/imgs/tree44.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .list {
+        opacity:.8;
+        .slide{
+            margin-bottom: 3px; 
+            border-radius: 2px
+        }
+        .item {
+             height: 50px;
+             p{
+                 font-size: 18px;
+                 font-weight: 500;
+                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                 color: black
+             }
+        }
+    }
+}

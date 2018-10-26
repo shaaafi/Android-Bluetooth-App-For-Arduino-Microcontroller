@@ -1,0 +1,134 @@
+<!--
+  Generated template for the EditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Edit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="update()">
+      <ion-list>
+          <ng-container *ngFor="let ob of dbArray;let i = index">
+              <ion-item *ngIf="i == 0">
+                  <ion-item-group>
+                      <ion-item-divider color="light">Room Name</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="roomName" name="roomName" placeholder="Give Room Name Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+              <ion-item *ngIf="i==1">
+                  <ion-item-group>
+                      <ion-item-divider color="light">1st Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="one" name="one" placeholder="Give 1st Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+              <ion-item *ngIf="i==2">
+                  <ion-item-group >
+                      <ion-item-divider color="light">2nd Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="two" name="two" placeholder="Give 2nd Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+              <ion-item *ngIf="i==3">
+                  <ion-item-group >
+                      <ion-item-divider color="light">3rd Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="three" name="three" placeholder="Give 3rd Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+              <ion-item *ngIf="i==4">
+                  <ion-item-group >
+                      <ion-item-divider color="light">4th Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="four" name="four" placeholder="Give 4th Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+              <ion-item-group *ngIf="i==5">
+    
+                  <ion-item>
+                      <ion-item-group >
+                          <ion-item-divider color="light">5th Load</ion-item-divider>
+                          <ion-item>
+                            <ion-input type="text" [(ngModel)]="five" name="five" placeholder="Give 5th Load Here"></ion-input>
+                          </ion-item>
+                        </ion-item-group>
+                  </ion-item>
+    
+              </ion-item-group>
+    
+              <ion-item *ngIf="i==6">
+                  <ion-item-group >
+                      <ion-item-divider color="light">6th Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="six" name="six" placeholder="Give 6th Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+              <ion-item *ngIf="i==7">
+                  <ion-item-group >
+                      <ion-item-divider color="light">7th Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="seven" name="seven" placeholder="Give 7th Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+              <ion-item *ngIf="i==8">
+                  <ion-item-group>
+                      <ion-item-divider color="light">8th Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="eight" name="eight" placeholder="Give 8th Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+              <ion-item *ngIf="i==9">
+                  <ion-item-group >
+                      <ion-item-divider color="light">9th Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="nine" name="nine" placeholder="Give 9th Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+              <ion-item *ngIf="i==10">
+                  <ion-item-group >
+                      <ion-item-divider color="light">10th Load</ion-item-divider>
+                      <ion-item>
+                        <ion-input type="text" [(ngModel)]="ten" name="ten" placeholder="Give 10th Load Here"></ion-input>
+                      </ion-item>
+                    </ion-item-group>
+              </ion-item>
+    
+          </ng-container>
+          <ion-item>
+              <b>Need More Switches?</b>
+              <a ion-button (click)="moreRoom()">Tap Here</a>
+            </ion-item>
+            <button type="submit" ion-button block>Update</button>
+      </ion-list>
+  </form>
+  
+
+</ion-content>
+
+
+

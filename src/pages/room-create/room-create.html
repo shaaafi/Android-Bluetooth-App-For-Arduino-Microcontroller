@@ -1,0 +1,32 @@
+<!--
+  Generated template for the RoomCreatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Create Room</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="save(f.value)">
+    <ion-list>
+      <ion-item-group *ngFor="let load of loads">
+        <ion-item-divider color="light">{{load.dis}}</ion-item-divider>
+        <ion-item>
+          <ion-input type="text" name="{{load.name}}" ngModel placeholder="Give {{load.dis}} Here"></ion-input>
+        </ion-item>
+      </ion-item-group>
+    </ion-list>
+    <ion-item>
+      <b>Need More Switches?</b>
+      <a ion-button (click)="moreRoom()">Tap Here</a>
+    </ion-item>
+    <button type="submit" ion-button block>Save</button>
+  </form>
+</ion-content>

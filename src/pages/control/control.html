@@ -1,0 +1,88 @@
+<!--
+  Generated template for the ControlPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title *ngIf="dbRoom.room">{{dbRoom.room}}</ion-title>
+        <ion-title *ngIf="!dbRoom.room">Control</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg">
+    <ion-list>
+        <ng-container *ngFor="let ob of dbArray;let i = index">
+
+            <ion-item *ngIf="(i+1)==1 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="one" (ionChange)="sendToggle(i+1)"></ion-toggle>
+            </ion-item>
+
+            <ion-item *ngIf="(i+1)==2 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="two" (ionChange)="sendToggle(i+1)" checked="true"></ion-toggle>
+            </ion-item>
+
+            <ion-item *ngIf="(i+1)==3 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="three" (ionChange)="sendToggle(i+1)" checked="false"></ion-toggle>
+            </ion-item>
+
+            <ion-item *ngIf="(i+1)==4 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="four" (ionChange)="sendToggle(i+1)" checked="false"></ion-toggle>
+            </ion-item>
+
+            <ion-item-group *ngIf="(i+1)==5 && ob.name != ''">
+
+              <ion-item>
+                  <ion-label>{{ob.name}}</ion-label>
+                  <ion-toggle [(ngModel)]="rangeState" checked="false" (ionChange)="changeStateOfRange(this.five)"></ion-toggle>
+              </ion-item>
+
+                 <ion-item>
+                    <ion-label>{{ob.name}}</ion-label>
+                    <ion-range min="10" max="255" step="25" [(ngModel)]="five" (ionChange)="sendToggle(i+1)">
+                        <ion-label range-left>Min</ion-label>
+                        <ion-label range-right>Max</ion-label>
+                    </ion-range>
+                </ion-item>
+
+            </ion-item-group>
+
+            <ion-item *ngIf="(i+1)==6 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="six" (ionChange)="sendToggle(i+1)" checked="false"></ion-toggle>
+            </ion-item>
+
+            <ion-item *ngIf="(i+1)==7 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="seven" (ionChange)="sendToggle(i+1)" checked="false"></ion-toggle>
+            </ion-item>
+
+            <ion-item *ngIf="(i+1)==8 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="eight" (ionChange)="sendToggle(i+1)" checked="false"></ion-toggle>
+            </ion-item>
+
+            <ion-item *ngIf="(i+1)==9 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="nine" (ionChange)="sendToggle(i+1)" checked="false"></ion-toggle>
+            </ion-item>
+
+            <ion-item *ngIf="(i+1)==10 && ob.name != ''">
+                <ion-label>{{ob.name}}</ion-label>
+                <ion-toggle [(ngModel)]="ten" (ionChange)="sendToggle(i+1)" checked="false"></ion-toggle>
+            </ion-item>
+
+        </ng-container>
+
+    </ion-list>
+
+
+</ion-content>
